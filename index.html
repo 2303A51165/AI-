@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HireSight - Job Scam Detection</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      background: #f4f4f4;
+      padding: 20px;
+    }
+
+    .container {
+      width: 600px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    textarea, input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 10px;
+      width: 100%;
+      background: green;
+      color: white;
+      border: none;
+    }
+
+    .result {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .high-risk { color: red; }
+    .medium-risk { color: orange; }
+    .low-risk { color: green; }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+  <h1>HireSight - Job Scam Detection</h1>
+
+  <!-- Job Checker -->
+  <h3>Job Scam Checker</h3>
+  <textarea id="job-description" placeholder="Paste job description here..."></textarea>
+  <button onclick="analyzeJob()">Analyze</button>
+  <div id="job-result" class="result"></div>
+
+  <!-- Company Check -->
+  <h3>Company Verification</h3>
+  <input id="company-name" placeholder="Enter company name">
+  <button onclick="verifyCompany()">Verify</button>
+  <div id="company-result" class="result"></div>
+
+  <!-- Report -->
+  <h3>Report a Scam</h3>
+  <input id="report-name" placeholder="Your Name">
+  <input id="report-email" placeholder="Your Email">
+  <input id="report-company" placeholder="Company Name">
+  <textarea id="report-description" placeholder="Describe the scam"></textarea>
+  <button onclick="reportScam()">Submit Report</button>
+  <div id="report-result" class="result"></div>
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
